@@ -4,15 +4,15 @@ import { Switch} from 'react-router-dom';
 import CreateUser from "./pages/CreateUser";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 
 function App() {
 	return (
 		<Router>
-			<div>
-				<Navbar />
+				<div>
+				<NavBar/>
 				<Wrapper>
 				<Router>
 					<Switch>
@@ -25,8 +25,9 @@ function App() {
 					{/* <Route exact path="/login" component={Login} /> */}
 				</Wrapper>
 				<Footer />
-			</div>
+				</div>
 		</Router>
+	
 	);
 }
 

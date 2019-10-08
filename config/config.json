@@ -2,7 +2,8 @@
   "development": {
     "username": "root",
     "password": "Bobvilla1",
-    "database": "user",
+    "database": "konnectd_db",
+
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
