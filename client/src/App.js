@@ -5,7 +5,7 @@ import CreateUser from "./pages/CreateUser";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
 				</Router>
 					{/* <Route exact path="/login" component={Login} /> */}
 				</Wrapper>
+				<Footer />
 			</div>
 		</Router>
 	);
