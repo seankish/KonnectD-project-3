@@ -14,6 +14,9 @@ class NavBar extends React.Component {
 			collapsed: true
 		};
 	}
+	// routeLog = () => {
+	// 	this.props.history.push("/login")
+	// }
 	
 	toggleNavbar() {
 		this.setState({
@@ -31,14 +34,14 @@ class NavBar extends React.Component {
 								<NavLink href="/home">Home</NavLink>
 							</NavItem>
 							<NavItem>
-							<LoginControl/>
+							<LoginControl routeLog={this.routeLog}/>
 							</NavItem>
 							<NavItem>
 								<NavLink href="/createUser">Create a Profile</NavLink>
 							</NavItem>
-							<NavItem>
+							{/* <NavItem>
 								<NavLink href="/about">About</NavLink>
-							</NavItem>
+							</NavItem> */}
 							{/* <NavItem>
 								<NavLink href="https://github.com/Cmoconnor0823/Connect">GitHub</NavLink>
 							</NavItem> */}
