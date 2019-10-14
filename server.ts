@@ -1,9 +1,40 @@
-const express = require("express");
+//const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3005;
 const app = express();
-var db = require("./models");
+const db = require("./models");
 var seqPORT = process.env.PORT || 8080;
+const Sequelize = require("sequelize");
+
+//===============================================
+
+//const models = require("./models")
+//const routes = require("./routes");
+
+//KonnectD Database
+
+const dbKonnectD = require("./config/index.ts");
+
+//Testind KonnectD Databse Connection
+
+dbKonnectD.authenticate()
+  .then(() => {
+    console.log('Connection to Konnectd_db has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
+
+
+//test rout
+
+app.get("/",(req,res)=>{
+
+  res.send("INDEX");
+})
+
+//=================================================================
+
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -14,36 +45,24 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Get username and password from database to check against login form
-app.post("/api/login", function(req, res) {
+app.post("/api/users", function(req, res) {
   console.log(req.body)
-  db.Profile.findOne({
+  db.User.findOne({
     where:{
-      userName: req.body.userName,
+      userName: req.body.username,
       password: req.body.password
     }}).then(function(dbusers) {
       console.log(dbusers)
-      res.send(dbusers)
     // res.render("Home");
   });
 });
 
-// Add new User to Database
-  app.post("/api/createUser",function(req,res){
-  db.Profile.create(req.body).then(function(newUser){
-    res.send(newUser)
-  });
-});
-// Get all profiles and display them in order
-app.get("/api/getprofiles", function(req,res){
-  db.Profile.findAll({
-    // order: [
-    //   ['lastName', 'ASC']
-    // ]
-  }).then(function(dbProfile) {
-    console.log(dbProfile);
-    res.json(dbProfile);
-  });
-});
+////////////////////////////////////////////////////////////////////
+//const models = require("./models")
+//const routes = require("./routes");
+
+
+
 
 
 // Send every other request to the React app
@@ -62,4 +81,5 @@ db.sequelize.sync({ force: false }).then(function() {
 
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+
 

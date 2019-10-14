@@ -13,6 +13,7 @@ class CreatePCard extends Component {
 		password: "",
 		firstName: "",
 		lastName: "",
+		position:"",
 		admin: "",
 	};
 	handleNewUser = event => {
@@ -106,10 +107,10 @@ class CreatePCard extends Component {
 							placeholder="Last Name (required)"
 						/>
 						<Input
-							value={this.state.posistion}
+							value={this.state.position}
 							onChange={this.handleInputChange}
-							name="posistion"
-							placeholder="Job Posistion (required)"
+							name="position"
+							placeholder="Job Position (required)"
 						/>
 						<Input
 							value={this.state.phoneNumber}
@@ -123,15 +124,9 @@ class CreatePCard extends Component {
 							name="email"
 							placeholder="Email address (required)"
 						/>
-						<Input
-							value={this.state.position}
-							onChange={this.handleInputChange}
-							name="position"
-							placeholder="Job title/position (required)"
-						/>
 						<div className="card-footer">
-							Check the box below if you want to create a new project. This will make you admin of the project.
-							If you already have a project enter your project key below
+							<h6 className="m-3">Check the box below if you want to create a new project. This will make you admin of the project.
+							If you already have a project enter your project key below</h6>
 						<Input
 								type="checkbox"
 								id="admin"
@@ -152,6 +147,9 @@ class CreatePCard extends Component {
                 					placeholder="Synopsis (Optional)"
 								/> */}
 
+
+
+							{/* The below button needs to check for any altered state in the form not just the userName and Password */}
 						<FormBtn
 							disabled={!(this.state.userName && this.state.password)}
 							onClick={this.handleNewUser}
