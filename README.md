@@ -1,36 +1,37 @@
 # Connect
 
-The final group project for the Trilogy boot camp program
+A management tool for projects and records
 
+Developed by Sean Kish, Rodrigo Villarreal, Caitlin O'Connor, and Jonathan Wells
 
+## [LIVE DEMO](https://konnectd123.herokuapp.com)
 
-# Create React Express App
+## Overview
+Users can visit KConnectD to manage and organize products. The app includes Google Calendar integration, a to-do list, access to contacts and messaging.
 
-## About This Boilerplate
+## Design
+Create an account to start using KConnectD. Your home page will be shared with your project members. From there you can access their information.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+You can also view your to-do list. To add a new item, enter the item in the input box and click "Add to your To-Do's".
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+You can view items on your calendar by clicking "Sign-In" and entering your Gmail account credentials. Click "Show/Hide Create Event Form" to add items to your calendar. Click "Show/Hide Google Calendar Events" to see events on your calendar.
 
-## Starting the app locally
+You will also see a message board. For each message, you can see the created date, author, subject, and message content. Click "Show/Hide Message Form" to create a new message.
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+The platform is currently formatted for desktop browser or tablet.
 
-```
-npm install
-```
+## Languages and Libraries Used
 
-This should install node modules within the server and the client folder.
+* [React](https://reactjs.org/)
+* [BootStrap](https://getbootstrap.com/)
+* [MySQL](https://getbootstrap.com/)
+* [Sequalize](https://www.npmjs.com/package/sequelize)
+* [Google Calendar API](https://developers.google.com/calendar)
+* [Heroku](https://id.heroku.com/login)
 
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
-
+## Future Development
+* Profile picture
+* Access to user profiles
+* Public and private projects
+* Follow projects
+* Mobile view
