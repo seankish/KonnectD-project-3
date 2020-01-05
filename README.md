@@ -1,4 +1,4 @@
-# Connect
+# KonnectD
 
 A management tool for projects and records
 
@@ -7,10 +7,10 @@ Developed by Sean Kish, Rodrigo Villarreal, Caitlin O'Connor, and Jonathan Wells
 ## [LIVE DEMO](https://konnectd123.herokuapp.com)
 
 ## Overview
-Users can visit KConnectD to manage and organize products. The app includes Google Calendar integration, a to-do list, access to contacts and messaging.
+Users can visit KonnectD to manage and organize products. The app includes Google Calendar integration, a to-do list, access to contacts and messaging.
 
 ## Design
-Create an account to start using KConnectD. Your home page will be shared with your project members. From there you can access their information.
+Create an account to start using KonnectD. Your home page will be shared with your project members. From there you can access their information.
 
 You can also view your to-do list. To add a new item, enter the item in the input box and click "Add to your To-Do's".
 
